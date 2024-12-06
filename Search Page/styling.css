@@ -40,10 +40,11 @@ header .container{
 }
 
 .display{
+    margin: 30px 50px;
     display: grid;
     font-family: Poppoins, sans-serif;
     margin-top: 30px;
-    place-items: center center;
+
 }
 
 .cards{
@@ -56,7 +57,6 @@ header .container{
 
 .card{
     position: relative;
-
     border-radius: 20px;
     box-shadow: 0 1px 15pxpx rgba(0, 0, 0, 0.5);
     
@@ -86,8 +86,8 @@ header .container{
 
 
 img{
-    width: 100%;
-    height: 100%;
+    width: 204px;
+    height: 160px;
     display: block;
     border-radius: 20px 20px 20px 20px;
 }
@@ -123,3 +123,89 @@ img{
     font-size: 20px;
     line-height: 1.8;
 }
+/* General Styles for Search Bar */
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .inputWrap {
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width of the search bar */
+    position: relative;
+    display: flex; /* Flexbox for aligning input and icon */
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Rounded corners */
+    padding: 5px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Search Input Field */
+  .search {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #333; /* Text color */
+    border: none; /* Remove input border */
+    background-color: transparent; /* Inherit background */
+    outline: none; /* Remove focus outline */
+  }
+  
+  /* Placeholder text styling */
+  .search::placeholder {
+    color: #aaa; /* Light gray placeholder */
+    font-style: italic;
+  }
+  .searchButton{
+    border: none;
+    background-color: cyan;
+  }
+  .searchButton:hover{
+    cursor: pointer;
+    color: #14b8a6;
+
+  }
+  /* Search Icon */
+  .searchIcon {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #aaa; /* Light gray icon */
+    margin-right: 10px; /* Space between icon and input */
+  }
+  
+  /* Hover state for the container */
+  .inputWrap:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+  }
+  
+  /* Focus state for the input */
+  .search:focus ~ .searchIcon {
+    color: #14b8a6; /* Teal color on focus */
+  }
+  
+  .search:focus {
+    border: none;
+  }
+  
+  .return-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 48%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .return-to-top-btn:hover {
+    background-color: #0056b3;
+  }
