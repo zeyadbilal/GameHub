@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.5) url(./mario.webp) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.container{
+    background-color: rgb(188, 182, 182);
+    height: 500px;
+    width: 60%;
+    border-radius: 10px;
+}
+.contactInfo{
+    background-color: black;
+}
+.message{
+    background-color: aquamarine;
+}
