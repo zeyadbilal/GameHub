@@ -32,6 +32,7 @@ displayGames = (games) => {
         ` ;
         Cards.appendChild(card) ;
     }) ;
+    document.getElementsByClassName('loader')[0].style.display = 'none' ;
 }
 
 convertToGame = (game) => {
@@ -40,55 +41,90 @@ convertToGame = (game) => {
 
 
 
+let retryCount = 0;
+const MAX_RETRIES2 = 5;
+const MAX_RETRIES1 = 10;
+
 getRandomGame = () => {
+    if (retryCount >= MAX_RETRIES1) {
+        console.error('Max retries reached');
+        document.getElementsByClassName('display')[0].innerHTML = '<p class= "errorMessage">Retry Again later :(</p>'
+        document.getElementsByClassName('loader')[0].style.display = 'none';
+        return;
+    }
+
+    console.log('Fetching random games');
+    document.getElementsByClassName('loader')[0].style.display = 'block';
     const page = Math.floor(Math.random() * 5) + 1;
-    const parms = new URLSearchParams(
-        {
-            key : API_KEY, 
-            page_size : 45,
-            page : page
-        }
-    ) ;
-    fetch(`${URL}?${parms}`)
-    .then(res => res.json())
-    .then(res => {
-        res.results.forEach(game => {
-            const convertedGame = convertToGame(game) ;
-            displayGames([convertedGame]) ;
+    const params = new URLSearchParams({
+        key: API_KEY,
+        page_size: 45,
+        page: page,
+    });
+
+    fetch(`${URL}?${params}`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
         })
-    })
-}
+        .then((data) => {
+            retryCount = 0; // Reset retry count on success
+            data.results.forEach((game) => {
+                const convertedGame = convertToGame(game);
+                displayGames([convertedGame]);
+            });
+        })
+        .catch((err) => {
+            console.error('Error fetching random games:', err);
+            retryCount++;
+            getRandomGame(); // Retry
+        });
+};
 
 getRandomGame() ;
 
 searchGame = () => {
-    const search = document.querySelector('.search').value ;
-    document.querySelector('.cards').innerHTML = '' ;
+    document.getElementsByClassName('cards')[0].innerHTML = '' ;
+    if (retryCount >= MAX_RETRIES2) {
+        console.error('Max retries reached');
+        document.getElementsByClassName('cards')[0].innerHTML = '<p class= "errorMessage">Retry Again later :(</p>'
+        document.getElementsByClassName('loader')[0].style.display = 'none';
+        retryCount = 0;
+        return;
+    }
+
+    console.log('Fetching search games');
+    console.log('try count: ' + retryCount);
+    document.getElementsByClassName('loader')[0].style.display = 'block';
     const page = Math.floor(Math.random() * 5) + 1;
-    const parms = new URLSearchParams(
-        {
-            key : API_KEY, 
-            page_size : 45,
-            page : page,
-            search : search,
-            ordering : '-rating'
-        }
-    ) ;
-    fetch(`${URL}?${parms}`)
-    .then(res => res.json())
-    .then(res => {
-        if(res.results.length === 0){
-            search.value = '' ;
-            alert('No games found') ;
-            getRandomGame();
-            return ;
-        }
-        else{res.results.forEach(game => {
-            const convertedGame = convertToGame(game) ;
-            displayGames([convertedGame]) ;
-        })}
-        search.value = '' ;
-    })
+    const params = new URLSearchParams({
+        key: API_KEY,
+        page_size: 45,
+        page: page,
+        search: document.getElementsByClassName('search')[0].value
+    });
+
+    fetch(`${URL}?${params}`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            retryCount = 0; // Reset retry count on success
+            data.results.forEach((game) => {
+                const convertedGame = convertToGame(game);
+                displayGames([convertedGame]);
+            });
+        })
+        .catch((err) => {
+            console.error('Error fetching random games:', err);
+            retryCount++;
+            searchGame(); // Retry
+        });
 }
 
 let scrollUp = document.getElementById("returnToTopBtn");
