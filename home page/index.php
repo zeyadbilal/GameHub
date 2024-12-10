@@ -1,3 +1,12 @@
+<?php
+    // to start the session and check if the user is logged in
+    // check if the user is logged in
+    
+    session_start();
+    include("../Authentication_System/connectionDB.php");
+    include("../Authentication_System/functions.php");
+    $user_data = check_login($con);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +25,13 @@
   <i class="fa-solid fa-skull-crossbones logo"></i>
   <a href="" class="menu"><i class="fa-solid fa-braille"></i></a>
   <ul class="nav">
-    <li><a href="../Search Page/index.html">explore</a></li>
+    <li><a href="../Search Page/index.php">explore</a></li>
+    <li><a href="../Authentication_System/logout.php">Logout</a></li>
     <li><a href="">top rated</a></li>
     <li><a href="">favorites</a></li>
   </ul>
   <div>
-    <a href="../12.2 contact us section/index2.html" class="contact">contact us</a></li>
+    <a href="../12.2 contact us section/index2.php" class="contact">contact us</a></li>
   </div>
 
 </header>
@@ -46,7 +56,7 @@
                 </div>
               </div>
             </div>
-            <h1>Game<span>Hub</span></h1>
+            <h1>Welcome <?php echo $user_data['user_name']; ?></h1>
           </div>
           <div class="right">
             <ul class="description">

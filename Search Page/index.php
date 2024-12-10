@@ -1,3 +1,12 @@
+<?php
+    // to start the session and check if the user is logged in
+    // check if the user is logged in
+    
+    session_start();
+    include("../Authentication_System/connectionDB.php");
+    include("../Authentication_System/functions.php");
+    $user_data = check_login($con);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
