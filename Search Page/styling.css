@@ -1,287 +1,210 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #E6E6FA ;
-    display: flex;
-        flex-direction: column;
-
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfdfd, #f8f8f8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px; 
 }
-
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 4;
-    display: block;
-}   
-a{
-    text-decoration: none;
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: white; 
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(228, 226, 226); 
+  border-bottom: 2px solid #ff0000; 
 }
-header .container{
-    max-width: 82rem;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    height: 65px;
+.navbar .container{
+  max-width: 82rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 65px;
 }
-.nav{
-    margin-left: 9rem;
-    font-weight: 600;
-    color: hsl(208, 17%, 79%);
-    cursor: pointer;     /* الخاصية دي بتغير شكل المؤشر (الماوس) لما المستخدم يحركه فوق العنصر  */
-    transition: .3s;
+.navbar h2 {
+  color: black;
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 600; 
+  letter-spacing: 1px; 
 }
-.nav:hover{
-    color:rgb(68, 68, 255)
+span{
+  color: #ff0000;
 }
-
-.display{
-    margin: -3px 221px;
-    display: grid;
-    font-family: Poppoins, sans-serif;
-    margin-top: 30px;
-
+.navbar .backBtn {
+  color: #ff0000;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease; 
+  border-radius: 8px; 
 }
-
-.cards{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
-    padding: 20px;
-    grid-gap: 35px;
+.navbar .backBtn:hover {
+  color: #ff0000; 
+  background-color: rgba(255, 0, 0, 0.1); 
+  transform: scale(1.1);
 }
-
-.card{
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 0 1px 15pxpx rgba(0, 0, 0, 0.5);
-    
-
-}
-
-
-.card:hover .details{
-    opacity: 1;
-    transition: 0.5s;
-}
-
-.container{
-    position: relative;
-}
-
-.container::after{
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 20px 20px 0 0;
-    opacity: 0.2;
-}
-
-
-img{
-    width: 204px;
-    height: 160px;
-    display: block;
-    border-radius: 20px 20px 20px 20px;
-}
-
-.details{
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    transition: all 0.5s;
-    background: linear-gradient(180deg, #0000001a, #000000ad);
-    border-radius: 0 0 20px 20px;
-    position: absolute;
-    width: 204px;
-    top: 50%;
-    height: 50%;
-}
-
-.details>h3{
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.details>p{
-    text-align: center;
-    font-weight: 400px;
-    color: #aaa;
-    font-size: 20px;
-    line-height: 1.8;
-}
-/* General Styles for Search Bar */
 .searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .inputWrap {
-    width: 100%;
-    max-width: 400px; /* Limit the maximum width of the search bar */
-    position: relative;
-    display: flex; /* Flexbox for aligning input and icon */
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 25px; /* Rounded corners */
-    padding: 5px 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Search Input Field */
-  .search {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    color: #333; /* Text color */
-    border: none; /* Remove input border */
-    background-color: transparent; /* Inherit background */
-    outline: none; /* Remove focus outline */
-  }
-  
-  /* Placeholder text styling */
-  .search::placeholder {
-    color: #aaa; /* Light gray placeholder */
-    font-style: italic;
-  }
-  .searchButton{
-    border: none;
-    background-color: cyan;
-  }
-  .searchButton:hover{
-    cursor: pointer;
-    color: #14b8a6;
-
-  }
-  /* Search Icon */
-  .searchIcon {
-    font-size: 1.5rem; /* Adjust icon size */
-    color: #aaa; /* Light gray icon */
-    margin-right: 10px; /* Space between icon and input */
-  }
-  
-  /* Hover state for the container */
-  .inputWrap:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
-  }
-  
-  /* Focus state for the input */
-  .search:focus ~ .searchIcon {
-    color: #14b8a6; /* Teal color on focus */
-  }
-  
-  .search:focus {
-    border: none;
-  }
-  
-  .return-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 48%;
-    padding: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .return-to-top-btn:hover {
-    background-color: #0056b3;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.inputWrap {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+.search {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 1rem;
+  padding: 5px;
+}
+.search::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+.searchButton {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.searchButton:hover {
+  background-color: #440b0b;
+}
 
 
-  .loader {
-    position: relative;
-    width: 120px;
-    height: 90px;
-    margin: 190px auto;
-  }
-  
-  .loader:before {
-    content: "";
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #000000;
-    animation: loading-bounce 0.5s ease-in-out infinite alternate;
-  }
-  
-  .loader:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 7px;
-    width: 45px;
-    border-radius: 4px;
-    box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
-    animation: loading-step 1s ease-in-out infinite;
-  }
-  
-  @keyframes loading-bounce {
-    0% {
+.loader {
+  width: 120px;
+  height: 90px;
+  margin: 50px auto;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #3a0303;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+
+.display {
+  width: 90%;
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.card {
+  background-color: #3a0303;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 1.2rem;
+  color: #d8d2d2;
+  margin: 10px;
+}
+.card p {
+  font-size: 1rem;
+  color: #d8d2d2;
+  margin: 0 10px 10px;
+}
+
+
+.return-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #7b1d22;
+  color: rgb(203, 26, 26);
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.return-to-top-btn:hover {
+  background-color: #260404;
+}
+
+
+.footer-bar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+
+@keyframes loading-bounce {
+  0% {
       transform: scale(1, 0.7);
-    }
-  
-    40% {
+  }
+  40% {
       transform: scale(0.8, 1.2);
-    }
-  
-    60% {
+  }
+  60% {
       transform: scale(1, 1);
-    }
-  
-    100% {
+  }
+  100% {
       bottom: 140px;
-    }
   }
-  
-  @keyframes loading-step {
-    0% {
-      box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
-              0 10px 0 #f2f2f2,
-              -35px 50px 0 #f2f2f2,
-              -70px 90px 0 #f2f2f2;
-    }
-  
-    100% {
-      box-shadow: 0 10px 0 #f2f2f2,
-              -35px 50px 0 #f2f2f2,
-              -70px 90px 0 #f2f2f2,
-              -70px 90px 0 rgba(0, 0, 0, 0);
-    }
-  }
-
-.errorMessage{
-    color: red;
-    font-weight: 600;
-    text-align: center;
-    font-size: 55px;
-    margin-bottom: 10px;
 }

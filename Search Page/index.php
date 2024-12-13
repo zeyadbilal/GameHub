@@ -19,30 +19,25 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="container">
+    <header class="navbar">
+        <button class="backBtn">←</button>
             <h2 class="lobo">Game<span>Hub</span></h2>
-            <a href="#" class="nav home">home</a>
-            <a href="#" class="nav join">join</a>
-            <div class="nav themeToggle">
-                <i class="fa-solid fa-sun"></i>
-                <i class="fa-solid fa-moon"></i>
+        <div class="searchBar">
+            <div class="inputWrap">
+                <input type="text" class="search" placeholder="Search...">
+                <button onclick="searchGame()" class="searchButton">Search</button>
             </div>
         </div>
-    </header> -->
-    <div class="searchBar">
-        <div class="inputWrap">
-            <input type="text" class="search" placeholder="Search...">
-            <button onclick="searchGame()" class="searchButton">Search</button>
-        </div>
-    </div>
+    </header>
     <div class="loader"></div>
     <div class="display">
         <div class="cards">
-
         </div>
     </div>
     <button id="returnToTopBtn" class="return-to-top-btn">↑</button>
+    <footer class="footer-bar">
+        <p>© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+    </footer>
 </body>
 
 </html>
