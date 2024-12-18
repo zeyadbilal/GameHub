@@ -401,3 +401,116 @@ textarea{
 }
 
 
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------rsposive------------------------------------------------------- */
+@media (max-width: 1000px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .nav{
+        margin-left: 3.5rem;
+        padding: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        white-space: normal;
+    }
+    .contactForm{
+        display: grid;
+        margin-top: 1.9rem;
+        column-gap: .8rem;
+        row-gap: .65rem;
+    }
+    .contactInput{
+        border-radius: 17px;
+        font-size: .87rem;
+        padding: 1.3rem 1.2rem calc(.75rem - 2px) 1.2rem;
+    }
+    .inputWrap label{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .inputWrap .icon{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .textarea>label{
+        top: 1.2rem;
+    }
+    .textarea .icon{
+        top: 1.2rem;
+    }
+    .contactInput:focus{
+        box-shadow: 0px 0px 0px 3.5px hsla(227, 32%, 56%, 0.065);
+    }
+    .inputWrap.notEmpty label{
+        font-size: .61rem;
+    }
+    .contactButtons{
+        column-gap: .8rem;
+        margin-top: .45rem;
+    }
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: .87rem;
+    }
+    .dashedWave{
+        bottom: 55%;
+        left: -10px;
+    }
+    #dashedWave{
+        stroke-width: .7px;
+        stroke-dasharray: 6;
+    }
+    .waveWrap{
+        transform: translateX(-10%);
+    }
+    .waveWrap svg{
+        height: calc(110% + 20px);
+        top: 50%;
+        transform: translateY(-5% ,-5%);
+    }
+}
+@media(max-width: 650px) {
+    header .container{
+        height: 50px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .left{
+        padding: 50px 1.5rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .formWrapper{
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .nav{
+        margin: 0;
+    }
+    .right{
+        display: none;
+    }
+}
+@media (max-width: 440px) {
+    .contactForm{
+        grid-template-columns: 1fr;
+    }
+    .inputWrap{
+        grid-column: span 2;
+    }
+    .contactButtons{
+        grid-template-columns: 1fr;
+        row-gap: .5rem;
+    }
+    h1{
+        font-size: 1.9rem;
+        line-height: 1;
+    }
+    h2{
+        font-size: 1.15rem;
+    }
+}
