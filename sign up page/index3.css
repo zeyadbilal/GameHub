@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Poppins, sans-serif;
+}
+/*-------------------------------------------header------------------------------------------------*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+}   
+a{
+    text-decoration: none;
+}
+header .container{
+    max-width: 82rem;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 65px;
+}
+.nav{
+    margin-left: 9rem;
+    font-weight: 600;
+    color: hsl(208, 17%, 79%);
+    cursor: pointer;     /* الخاصية دي بتغير شكل المؤشر (الماوس) لما المستخدم يحركه فوق العنصر  */
+    transition: .3s;
+}
+.nav:hover{
+    color:rgb(68, 68, 255)
+}
+.fa-moon{
+    display: none;   /*عشان انا لغيت فكره الدارك كود و ال لايت مود*/
+}
+.fa-sun{
+    display: none;
+}
+/*----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------main-----------------------------------------------------*/
+.contact{
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+.contact .container{
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr; /*عملت عمود واحد و صف واحد عشان احط الشمال و اليمين ع بعض*/
+    grid-template-rows: 1fr;
+}
+.contact .container>div{
+    grid-row: 1/2;
+    grid-column: 1/2; /*وبكدا خليت الشمال و  اليمين يبدأو و ينتهو عند نفس النقطه*/
+}
+.formWrapper{
+    max-width: 35rem;
+}
+
+.left{
+    width: 100%;
+    max-width: 82rem;
+    margin: 0 auto;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1;
+    white-space: nowrap;  /*عشان اخلي النص ثابت */
+    
+}
+span{
+    color: red;
+}
+.contactForm{
+    display: grid;
+    margin-top: 2.55rem;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+.inputWrap{
+    position: relative;
+}
+.w-100{
+    grid-column: span 2;
+}
+.contactInput{
+    width: 100%;
+    background-color: hsla(227, 32%, 56%, 0.065);
+    border: none;
+    outline: none;
+    padding: 1.4rem 1.35rem .7rem 1.35rem;
+    font-family: inherit;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: .3s;
+    border: 2px solid transparent; /*بوردر شفاف*/
+
+}
+.contactInput:hover{
+    background-color: rgba(224, 226, 229, 0.622);
+    box-shadow: 0px 0px 10px .2px rgb(228, 227, 227);
+    /*X   Y  BLUR SPREAD*/
+}
+.contactInput:focus{
+    background-color:hsla(0, 0%, 100%, 0.065) ;
+    border: 2px solid hsl(0, 83%, 63%);
+    box-shadow: 0px 0px 0px 5px hsla(227, 32%, 56%, 0.065);
+}
+
+.inputWrap label{
+    position: absolute;
+    top: 50%;
+    left: 1.32rem;
+    transform: translatey(-50%);  /*عشان اسنترو ف النص ع طول المحور الراسي*/
+    color: rgb(156, 155, 152);
+    pointer-events: none; /* عشان اخلي الماوس ميتفاعلش معاه يعني لو جيه ع الكلمه ولا اكنو شيفها فاقدر اكتب بسهولهخ*/
+    transition: .25s;
+}
+.inputWrap .icon{
+    position: absolute;
+    top: 50%;
+    right: 1.32rem;
+    transform: translatey(-50%);
+    pointer-events: none;
+    color: rgb(156, 155, 152);
+    font-size: 1.3rem;
+    transition: .25s;
+}
+textarea{
+    resize: none;
+    max-width: 100%;
+    min-height: 150px;
+}
+.textarea>label{
+    top: 1.2rem;
+    transform: none;
+}
+.textarea .icon{
+    top: 1.2rem;
+    transform: none;
+}
+.inputWrap.foucs label{
+    color:hsl(0, 83%, 63%) ;
+}
+.inputWrap.foucs .icon{
+    color: hsl(0, 83%, 63%);
+}
+.inputWrap.notEmpty label{
+    font-size: .66rem;
+    top: .75rem;
+    transform: translateY(0);
+}
+
+.inputWrap.notEmpty .icon{
+    font-size: 1rem;
+}
+
+
+
+
+.contactButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+.btn{
+    display: inline-block;
+    padding: 1.1rem 2rem;
+    background-color: hsl(0, 100%, 50%);
+    color: white;
+    border: 0;
+    border-radius: 40px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+    grid-column: span 2;
+}
+.btn:hover{
+    background-color: hsl(0, 59%, 58%);
+    box-shadow: 0px 0px 10px .2px rgb(247, 162, 162);
+}
+.btn:active{
+    transform: scale(1.05);
+}
+.btn.btn.upload{
+    position: relative;
+    background-color: hsla(227, 32%, 56%, 0.065);
+    color: rgb(156, 155, 152);
+}
+.btn.btn.upload:hover{
+    background-color:rgba(224, 226, 229, 0.622) ;
+    box-shadow: 0px 0px 10px .2px rgb(228, 227, 227);
+
+}
+.btn.upload input{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+   opacity: 0;
+}
+.login{
+    grid-column: span 2;
+    padding: 0;
+    margin-top: 1rem;
+}
+.loginText{
+    margin-left: 0;
+}
+
+
+.right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    pointer-events: none;
+}
+.imagWrapper{
+    position: relative;
+    grid-column: 2;
+}
+.img{
+    position: absolute;
+    height: 100%;
+    left: 62%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.waveWrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background-color: white;
+}
+.waveWrap svg{
+    position: absolute;
+    height: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 2px);
+}
+#wave{
+    fill: white;
+    height: 100%;
+
+}
+
+.dashedWave{
+    position: absolute;
+    height: 120%;
+    bottom: 60%;
+    left: -8px;
+    transform: translateY(50%);
+}
+#dashedWave{
+    fill: none;
+    stroke: rgb(156, 155, 152);
+    stroke-width: 1px;
+    stroke-dasharray: 6.5;
+    
+}
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------rsposive------------------------------------------------------- */
+@media (max-width: 1000px){
+    header .container{
+        padding: 0 1rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .nav{
+        margin-left: 3.5rem;
+        padding: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        white-space: normal;
+    }
+    .formWrapper{
+        padding: 0 1rem;
+    }
+    .contactForm{
+        display: grid;
+        margin-top: 1.9rem;
+        column-gap: .8rem;
+        row-gap: .65rem;
+    }
+    .contactInput{
+        border-radius: 17px;
+        font-size: .87rem;
+        padding: 1.3rem 1.2rem calc(.75rem - 2px) 1.2rem;
+    }
+    .inputWrap label{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .inputWrap .icon{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .textarea>label{
+        top: 1.2rem;
+    }
+    .textarea .icon{
+        top: 1.2rem;
+    }
+    .contactInput:focus{
+        box-shadow: 0px 0px 0px 3.5px hsla(227, 32%, 56%, 0.065);
+    }
+    .inputWrap.notEmpty label{
+        font-size: .61rem;
+    }
+    .contactButtons{
+        column-gap: .8rem;
+        margin-top: .45rem;
+    }
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: .87rem;
+    }
+    .dashedWave{
+        bottom: 55%;
+        left: -10px;
+    }
+    #dashedWave{
+        stroke-width: .7px;
+        stroke-dasharray: 6;
+    }
+    .waveWrap{
+        transform: translateX(-10%);
+    }
+    .waveWrap svg{
+        height: calc(110% + 20px);
+        top: 50%;
+        transform: translateY(-5% ,-5%);
+    }
+}
+@media(max-width: 650px) {
+    header .container{
+        height: 50px;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+    .left{
+        padding: 50px 1.5rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .formWrapper{
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .nav{
+        margin: 0;
+    }
+    .right{
+        display: none;
+    }
+}
+@media (max-width: 440px) {
+    .contactForm{
+        grid-template-columns: 1fr;
+    }
+    .inputWrap{
+        grid-column: span 2;
+    }
+    .contactButtons{
+        grid-template-columns: 1fr;
+        row-gap: .5rem;
+    }
+    h1{
+        font-size: 1.9rem;
+        line-height: 1;
+    }
+    h2{
+        font-size: 1.15rem;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+/* ----------------------------------------rsposive------------------------------------------------------- */
+@media (max-width: 1000px){
+    h2{
+        font-size: 1.5rem;
+    }
+    .nav{
+        margin-left: 3.5rem;
+        padding: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+    h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        white-space: normal;
+    }
+    .contactForm{
+        display: grid;
+        margin-top: 1.9rem;
+        column-gap: .8rem;
+        row-gap: .65rem;
+    }
+    .contactInput{
+        border-radius: 17px;
+        font-size: .87rem;
+        padding: 1.3rem 1.2rem calc(.75rem - 2px) 1.2rem;
+    }
+    .inputWrap label{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .inputWrap .icon{
+        font-size: .9rem;
+        right: 1.2rem;
+    }
+    .textarea>label{
+        top: 1.2rem;
+    }
+    .textarea .icon{
+        top: 1.2rem;
+    }
+    .contactInput:focus{
+        box-shadow: 0px 0px 0px 3.5px hsla(227, 32%, 56%, 0.065);
+    }
+    .inputWrap.notEmpty label{
+        font-size: .61rem;
+    }
+    .contactButtons{
+        column-gap: .8rem;
+        margin-top: .45rem;
+    }
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: .87rem;
+    }
+    .dashedWave{
+        bottom: 55%;
+        left: -10px;
+    }
+    #dashedWave{
+        stroke-width: .7px;
+        stroke-dasharray: 6;
+    }
+    .waveWrap{
+        transform: translateX(-10%);
+    }
+    .waveWrap svg{
+        height: calc(110% + 20px);
+        top: 50%;
+        transform: translateY(-5% ,-5%);
+    }
+}
+@media(max-width: 650px) {
+    header .container{
+        height: 50px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .left{
+        padding: 50px 1.5rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .formWrapper{
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .nav{
+        margin: 0;
+    }
+    .right{
+        display: none;
+    }
+}
+@media (max-width: 440px) {
+    .contactForm{
+        grid-template-columns: 1fr;
+    }
+    .inputWrap{
+        grid-column: span 2;
+    }
+    .contactButtons{
+        grid-template-columns: 1fr;
+        row-gap: .5rem;
+    }
+    h1{
+        font-size: 1.9rem;
+        line-height: 1;
+    }
+    h2{
+        font-size: 1.15rem;
+    }
+}
