@@ -1,3 +1,53 @@
+<!-- <?php
+    include("connectionDB.php");
+    include("functions.php");
+    session_start();
+
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        //something was posted
+        $username = $_POST['user_name'];
+        $password = $_POST['password'];
+
+        if(!empty($username) && !empty($password) && !is_numeric($username))
+        {
+
+            //read from  database
+            $query = "select * from users where user_name = '$username' limit 1";
+            $result = mysqli_query($con, $query);
+            if($result && mysqli_num_rows($result) > 0)
+            {
+                $user_data = mysqli_fetch_assoc($result);
+                if($user_data['password'] === $password)
+                {
+                    $_SESSION['user_id'] = $user_data['user_id'];
+                    header("Location: ../home page/index.php");
+                    die;
+                }
+            }
+
+            header("Location: login.php");
+            die;
+            echo "Please enter some valid information!";
+        }
+        else {
+            echo "Please enter some valid information!";
+        }
+    }
+?> -->
+
+
+<!-- php explain -->
+ <!-- This is a PHP script that handles user login functionality. Here's a succinct explanation:
+
+It includes two external PHP files: connectionDB.php and functions.php.
+It starts a session using session_start().
+It checks if the request method is POST. If so, it retrieves the user_name and password from the POST data.
+It validates the input data: both fields must be non-empty, and the username must not be numeric.
+If the input is valid, it queries the database to check if the username exists and if the password matches the stored password.
+If the credentials are correct, it sets the user_id in the session and redirects the user to ../home page/index.php. If not, it redirects the user to login.php and displays an error message. -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +60,7 @@
     <header>
         <div class="container">
             <h2 class="lobo">Game<span>Hup</span></h2>
-            <a href="#" class="nav home">home</a>
+            <a href="../home page/index.php" class="nav home">home</a>
             <!-- <a href="#" class="nav join">join</a> -->
             <div class="nav themeToggle">
                 <i class="fa-solid fa-sun"></i>
