@@ -12,7 +12,7 @@ function check_login($con){
         }
     }
     // redirect to login
-    header("Location: ../Authentication_System/login.php");
+    header("Location: ../login page/index4.php");
     die;
 }
 

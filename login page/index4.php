@@ -1,6 +1,6 @@
-<!-- <?php
-    include("connectionDB.php");
-    include("functions.php");
+<?php
+    include("../Authentication_System/connectionDB.php");
+    include("../Authentication_System/functions.php");
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -26,15 +26,15 @@
                 }
             }
 
-            header("Location: login.php");
+            header("Location: index4.php");
             die;
-            echo "Please enter some valid information!";
         }
         else {
-            echo "Please enter some valid information!";
         }
     }
-?> -->
+    else {
+    }
+?>
 
 
 <!-- php explain -->
@@ -79,24 +79,25 @@ If the credentials are correct, it sets the user_id in the session and redirects
                             <h1>Log in and let the games begin<Span>!</Span></h1>
                         </div>
                         <div class="contactForm">
-
+                            <form method="post" action="">
                             <div class="inputWrap w-100">
-                                <input type="email" class="contactInput" required>
+                                <input type="text" name="user_name" class="contactInput" required>
                                 <label>Username</label>
                                 <i class="icon fa-solid fa-envelope"></i>
                             </div>
 
                             <div class="inputWrap w-100">
-                                <input name="password" class="contactInput"></input>
+                                <input type ="password" name = "password" class="contactInput"></input>
                                 <label>Password</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
 
                             <div class="contactButtons">
-                                <input type="submit" class="btn">
+                                <input type="submit" name="login" value="Login" class="btn">
                             </div>
+                            </form>
                             <div class="login">
-                                <a href="../sign up page/index3.html" class="nav loginText">Don't have an account yet? Sign up here!</a>
+                                <a href="../sign up page/index3.php" class="nav loginText">Don't have an account yet? Sign up here!</a>
                             </div>
                          </div>
 

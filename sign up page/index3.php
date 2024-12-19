@@ -1,6 +1,6 @@
-<!-- <?php
-    include("connectionDB.php");
-    include("functions.php");
+<?php
+    include("../Authentication_System/connectionDB.php");
+    include("../Authentication_System/functions.php");
     session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -18,14 +18,14 @@
 
             mysqli_query($con, $query);
 
-            header("Location: ./login.php");
+            header("Location: ../login page/index4.php");
             die;
         }
         else {
             echo "Please enter some valid information!";
         }
     }
-?> -->
+?>
 
 <!-- pphp expplain -->
  <!-- This code snippet is written in PHP and is used for handling user registration.
@@ -72,6 +72,7 @@ In summary, this code handles user registration by validating user input and sto
                         <div class="heading">
                             <h1>Sign up and join the game<Span>!</Span></h1>
                         </div>
+                        <form method = "post" action="">
                         <div class="contactForm">
                             <div class="inputWrap">
                                 <input type="text" class="contactInput" required>
@@ -86,13 +87,13 @@ In summary, this code handles user registration by validating user input and sto
                             </div>
 
                             <div class="inputWrap w-100">
-                                <input type="email" class="contactInput" required>
+                                <input name="user_name" type="text" class="contactInput" required>
                                 <label>Username</label>
                                 <i class="icon fa-solid fa-envelope"></i>
                             </div>
 
                             <div class="inputWrap w-100">
-                                <input name="password" class="contactInput"></input>
+                                <input type="password" name="password" class="contactInput"></input>
                                 <label>Password</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
@@ -100,6 +101,7 @@ In summary, this code handles user registration by validating user input and sto
                             <div class="contactButtons">
                                 <input type="submit" class="btn">
                             </div>
+                            </form>
                             <div class="login">
                                 <a href="../login page/index4.html" class="nav loginText">Already have an account? Log in here!</a>
                             </div>
