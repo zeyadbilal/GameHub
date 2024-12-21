@@ -2,10 +2,11 @@ const API_KEY = 'b9b2dcd226424fc2acac1952598df07e' ;
 const URL = 'https://api.rawg.io/api/games' ;
 
 class Game{
-    constructor(name , rating , image){
+    constructor(name , rating , image,icon){
         this.name = name ;
         this.rating = rating ;
         this.image = image ;
+        this.icon=icon ;
     }
 }
 
@@ -36,7 +37,7 @@ displayGames = (games) => {
 }
 
 convertToGame = (game) => {
-    return new Game(game.name , game.rating , game.background_image) ;
+    return new Game(game.name , game.rating , game.background_image ) ;
 }
 
 

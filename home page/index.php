@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
 </head>
+
 <body>
 <header>
-  <i class="fa-solid fa-skull-crossbones logo"></i>
+  <h2>Game <span>Hub</span></h2>
   <a href="" class="menu"><i class="fa-solid fa-braille"></i></a>
   <ul class="nav">
     <li><a href="../Search Page/index.php">explore</a></li>
@@ -56,7 +57,7 @@
                 </div>
               </div>
             </div>
-            <h1>Welcome <?php echo $user_data['user_name']; ?></h1>
+            <h1>Welcome ?php echo $user_data['user_name']; ?.</h1>
           </div>
           <div class="right">
             <ul class="description">
@@ -97,7 +98,7 @@
                 </div>
               </div>
             </div>
-            <h1>Game<span>Hub</span></h1>
+            <h1><span>Welcome</span> name .</h1>
           </div>
           <div class="right">
             <ul class="description">
@@ -135,7 +136,7 @@
                 </div>
               </div>
             </div>
-            <h1>Game<span>Hub</span></h1>
+            <h1><span>Welcome</span> name .</h1>
           </div>
           <div class="right">
             <ul class="description">

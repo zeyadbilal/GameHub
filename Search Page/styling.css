@@ -39,7 +39,6 @@ body {
   font-size: 2rem;
   margin: 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif; 
   font-weight: 600; 
   letter-spacing: 1px; 
 }
@@ -115,7 +114,7 @@ span{
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: #3a0303;
+  background: #7c0000;
   animation: loading-bounce 0.5s ease-in-out infinite alternate;
 }
 
@@ -133,7 +132,7 @@ span{
   gap: 20px;
 }
 .card {
-  background-color: #3a0303;
+  background-color: #c13333;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -161,13 +160,14 @@ span{
 }
 
 
+
 .return-to-top-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: none;
-  background-color: #7b1d22;
-  color: rgb(203, 26, 26);
+  background-color: #be0000;
+  color: rgb(200, 197, 197);
   border: none;
   border-radius: 50%;
   padding: 15px;
@@ -176,7 +176,7 @@ span{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .return-to-top-btn:hover {
-  background-color: #260404;
+  background-color: #620000;
 }
 
 
