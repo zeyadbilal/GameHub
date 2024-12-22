@@ -50,10 +50,10 @@
         <div class="login-box">
             <h2>Sign In</h2>
             <form method = "post" action="">
-                <input type="text"  name="user_name"  placeholder="user_name" required>
-                <input type="password" name="password" placeholder="password" required>
+                <input type="text"  name="user_name"  placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <div class="options">
-                    <p>Not a member<a href="./signup.php">Sign up now</a> </p>
+                    <p>Not a member? <a href="./signup.php">Sign up now!</a> </p>
                 </div>
                 <button type="submit" name="login" value="Login" id = "btn">Log In</button>
             </form>

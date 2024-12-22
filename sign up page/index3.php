@@ -53,8 +53,8 @@ In summary, this code handles user registration by validating user input and sto
 <body>
     <header>
         <div class="container">
-            <h2 class="lobo">Game<span>Hup</span></h2>
-            <a href="../home page/index.php" class="nav home">home</a>
+            <h2 class="lobo">Game<span>Hub</span></h2>
+            <a href="../home page/index.php" class="nav home">Home</a>
             <!-- <a href="#" class="nav join">join</a> -->
             <div class="nav themeToggle">
                 <i class="fa-solid fa-sun"></i>

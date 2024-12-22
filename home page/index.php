@@ -26,13 +26,13 @@
   <h2>Game <span>Hub</span></h2>
   <h5 id="welcome" style="color: white; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome <?php echo $user_data['user_name']; ?></h5>
   <ul class="nav">
-    <li><a href="../Search Page/index.php">explore</a></li>
+    <li><a href="../Search Page/index.php">Explore</a></li>
     <li><a href="../Authentication_System/logout.php">Logout</a></li>
-    <li><a href="">top rated</a></li>
-    <li><a href="">favorites</a></li>
+    <li><a href="">Top Rated</a></li>
+    <li><a href="">Favorites</a></li>
   </ul>
   <div>
-    <a href="../12.2 contact us section/index2.php" class="contact">contact us</a></li>
+    <a href="../12.2 contact us section/index2.php" class="contact">Contact Us</a></li>
   </div>
 
 </header>
