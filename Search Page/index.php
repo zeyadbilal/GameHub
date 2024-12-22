@@ -37,7 +37,7 @@
     </div>
     <button id="returnToTopBtn" class="return-to-top-btn">↑</button>
     <footer class="footer-bar">
-        <p>© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+        <p>© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in Egypt and other countries.</p>
     </footer>
 </body>
 

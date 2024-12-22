@@ -40,8 +40,8 @@
         <div class="login-box">
             <h2>Sign Up</h2>
             <form method = "post" action="">
-                <input type="text"  name="user_name"  placeholder="user_name" required>
-                <input type="password" name="password" placeholder="password" required>
+                <input type="text"  name="user_name"  placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <div class="options">
                     <a href="./login.php">Sign in now?</a>
                 </div>
