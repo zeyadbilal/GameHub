@@ -28,7 +28,7 @@ displayGames = (games) => {
             </div>
             <div class="details">
                 <h3>${game.name}</h3>
-                <p>${game.rating}</p>
+                <p>Rating: ${game.rating}</p>
             </div>
         ` ;
         Cards.appendChild(card) ;
@@ -49,7 +49,7 @@ const MAX_RETRIES1 = 10;
 getRandomGame = () => {
     if (retryCount >= MAX_RETRIES1) {
         console.error('Max retries reached');
-        document.getElementsByClassName('display')[0].innerHTML = '<p class= "errorMessage">Retry Again later :(</p>'
+        document.getElementsByClassName('display')[0].innerHTML = '<p class= "errorMessage">Try Again Later :(</p>'
         document.getElementsByClassName('loader')[0].style.display = 'none';
         return;
     }
@@ -90,7 +90,7 @@ searchGame = () => {
     document.getElementsByClassName('cards')[0].innerHTML = '' ;
     if (retryCount >= MAX_RETRIES2) {
         console.error('Max retries reached');
-        document.getElementsByClassName('cards')[0].innerHTML = '<p class= "errorMessage">Retry Again later :(</p>'
+        document.getElementsByClassName('cards')[0].innerHTML = '<p class= "errorMessage">Try Again Later :(</p>'
         document.getElementsByClassName('loader')[0].style.display = 'none';
         retryCount = 0;
         return;

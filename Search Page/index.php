@@ -21,8 +21,7 @@
 
 <body>
     <header class="navbar">
-        <button class="backBtn">←</button>
-            <h2 class="lobo">Game<span>Hub</span></h2>
+        <h2 class="lobo">Game<span>Hub</span></h2>
         <div class="searchBar">
             <div class="inputWrap">
                 <input type="text" class="search" placeholder="Search...">
@@ -37,7 +36,8 @@
     </div>
     <button id="returnToTopBtn" class="return-to-top-btn">↑</button>
     <footer class="footer-bar">
-        <p>© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in Egypt and other countries.</p>
+        <p>© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in
+            Egypt and other countries.</p>
     </footer>
 </body>
 
