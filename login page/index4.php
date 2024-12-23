@@ -1,40 +1,40 @@
 <?php
-    include("../Authentication_System/connectionDB.php");
-    include("../Authentication_System/functions.php");
-    session_start();
+include("../Authentication_System/connectionDB.php");
+include("../Authentication_System/functions.php");
+session_start();
 
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        //something was posted
-        $username = $_POST['user_name'];
-        $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $username = $_POST['user_name'];
+    $password = $_POST['password'];
 
-        if(!empty($username) && !empty($password) && !is_numeric($username))
-        {
-
-            //read from  database
-            $query = "select * from users where user_name = '$username' limit 1";
-            $result = mysqli_query($con, $query);
-            if($result && mysqli_num_rows($result) > 0)
-            {
-                $user_data = mysqli_fetch_assoc($result);
-                if($user_data['password'] === $password)
-                {
-                    $_SESSION['user_id'] = $user_data['user_id'];
-                    header("Location: ../home page/index.php");
-                    die;
-                }
+    if (!empty($username) && !empty($password) && !is_numeric($username)) {
+        $query = "select * from users where user_name = '$username' limit 1";
+        $result = mysqli_query($con, $query);
+        
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+            if ($user_data['password'] === $password) {
+                $_SESSION['user_id'] = $user_data['user_id'];
+                header("Location: ../home page/index.php");
+                die;
             }
+        }
 
-            header("Location: index4.php");
-            die;
-        }
-        else {
-        }
+        echo "<script>
+                alert('Invalid username or password. Please try again.');
+                window.location.href = 'index4.php';
+              </script>";
+        die;
+    } else {
+        echo "<script>
+                alert('Please enter valid username and password.');
+                window.location.href = 'index4.php';
+              </script>";
+        die;
     }
-    else {
-    }
+}
 ?>
+
 
 
 <!-- php explain -->
@@ -54,14 +54,12 @@ If the credentials are correct, it sets the user_id in the session and redirects
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index4.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <header>
         <div class="container">
             <h2 class="lobo">Game<span>Hub</span></h2>
-            <a href="../home page/index.php" class="nav home">home</a>
-            <!-- <a href="#" class="nav join">join</a> -->
             <div class="nav themeToggle">
                 <i class="fa-solid fa-sun"></i>
                 <i class="fa-solid fa-moon"></i>
