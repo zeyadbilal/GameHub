@@ -54,7 +54,6 @@ In summary, this code handles user registration by validating user input and sto
     <header>
         <div class="container">
             <h2 class="lobo">Game<span>Hub</span></h2>
-            <a href="../home page/index.php" class="nav home">Home</a>
             <!-- <a href="#" class="nav join">join</a> -->
             <div class="nav themeToggle">
                 <i class="fa-solid fa-sun"></i>
@@ -103,7 +102,7 @@ In summary, this code handles user registration by validating user input and sto
                             </div>
                             </form>
                             <div class="login">
-                                <a href="../login page/index4.html" class="nav loginText">Already have an account? Log in here!</a>
+                                <a href="../login page/index4.php" class="nav loginText">Already have an account? Log in here!</a>
                             </div>
                          </div>
 
