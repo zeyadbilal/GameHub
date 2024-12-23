@@ -27,9 +27,8 @@
   <h5 id="welcome" style="color: white; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome <?php echo $user_data['user_name']; ?></h5>
   <ul class="nav">
     <li><a href="../Search Page/index.php">Explore</a></li>
+    <li><a href="">Log in</a></li>
     <li><a href="../Authentication_System/logout.php">Logout</a></li>
-    <li><a href="">Top Rated</a></li>
-    <li><a href="">Favorites</a></li>
   </ul>
   <div>
     <a href="../12.2 contact us section/index2.php" class="contact">Contact Us</a></li>
@@ -44,34 +43,34 @@
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide">
-        <img src="images/d4o2f27-f75ee1cd-e619-4bc7-94c1-f41876f29533.jpg" alt="">
+        <img src="images/wp5399083.webp" alt="">
         <div class="banner">
           <div class="left">
             <div class="features">
               <div class="rating">
                 <span class="score">8.9</span>
                 <div class="content">
-                  <span class="subtitle">lorem insjs jajss</span>
-                  <h4>Awesome</h4>
-                  <span>lorem wss a s asa</span>
+                  <span class="subtitle">Top review</span>
+                  <h4>Exquisite</h4>
+                  <span>A mix of action, exploration, and puzzles.</span>
                 </div>
               </div>
             </div>
-            <h1>Welcome <?php echo $user_data['user_name']; ?></h1>
+            <h1>God of war:kratos</h1>
           </div>
           <div class="right">
             <ul class="description">
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Awards
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>Game of the Year (The Game Awards 2018). 
                 </p>
 
               </li>
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Series Legacy
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>With over 51 million copies sold globally, the series is one of PlayStation's flagship franchises. 
                 </p>
               </li>
             </ul>
@@ -90,29 +89,29 @@
           <div class="left">
             <div class="features">
               <div class="rating">
-                <span class="score">8.9</span>
+                <span class="score">8.3</span>
                 <div class="content">
-                  <span class="subtitle">lorem insjs jajss</span>
-                  <h4>Awesome</h4>
-                  <span>lorem wss a s asa</span>
+                  <span class="subtitle">top review</span>
+                  <h4>Epic</h4>
+                  <span>Awarded the game a 9/10, praising its "absolutely gorgeous open-world" and "incredible combat."</span>
                 </div>
               </div>
             </div>
-            <h1><span>Welcome</span> name .</h1>
+            <h1>Ghost of tsushima</h1>
           </div>
           <div class="right">
             <ul class="description">
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Awards
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>Winner: Best Art Direction. 
                 </p>
 
               </li>
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Sales and Impact
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>As of March 2021, "Ghost of Tsushima" sold over 6.5 million copies worldwide, demonstrating its commercial success and popularity among players. 
                 </p>
               </li>
             </ul>
@@ -122,41 +121,121 @@
           </div>
         </div>
       </div>
+      
       <div class="swiper-slide">
-        <img src="images/call-of-duty-modern--13480.jpg" alt="">
+        <img src="images/modern-warfare-3-2023-4k-wallpapers-v0-u72ww7up0q1c1.webp" alt="">
         <div class="banner">
           <div class="left">
             <div class="features">
               <div class="rating">
-                <span class="score">8.9</span>
+                <span class="score">8.5</span>
                 <div class="content">
-                  <span class="subtitle">lorem insjs jajss</span>
+                  <span class="subtitle">top review</span>
                   <h4>Awesome</h4>
-                  <span>lorem wss a s asa</span>
+                  <span>Advanced graphics and immersive audio.</span>
                 </div>
               </div>
             </div>
-            <h1><span>Welcome</span> name .</h1>
+            <h1>modern warfare</h1>
           </div>
           <div class="right">
             <ul class="description">
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Awards
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>Nominated for Best Multiplayer.
                 </p>
 
               </li>
               <li>
-                <h4><i class="fa-regular fa-circle-check"></i> lorem ipsum
+                <h4><i class="fa-regular fa-circle-check"></i> Sales and Popularity
                 </h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                <p>Among the top-selling games of 2023 during its release month. 
                 </p>
               </li>
             </ul>
             <div class="trailer">
               <h2>Watch Trailer</h2>
 <iframe width="853" height="480" src="https://www.youtube.com/embed/i3IsLrPeZG8" title="Call of Duty: Modern Warfare III - Gameplay Reveal Trailer | PS5 &amp; PS4 Games" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/minee.jpeg" alt="">
+        <div class="banner">
+          <div class="left">
+            <div class="features">
+              <div class="rating">
+                <span class="score">9.5</span>
+                <div class="content">
+                  <span class="subtitle">top review</span>
+                  <h4>Limitless</h4>
+                  <span>Rated highly for its creativity, freedom, and community-driven content.</span>
+                </div>
+              </div>
+            </div>
+            <h1>Minecraft</h1>
+          </div>
+          <div class="right">
+            <ul class="description">
+              <li>
+                <h4><i class="fa-regular fa-circle-check"></i> Awards
+                </h4>
+                <p>2011 Game Developers Choice Awards: Innovation Award 
+                </p>
+
+              </li>
+              <li>
+                <h4><i class="fa-regular fa-circle-check"></i> Sales and Popularity
+                </h4>
+                <p>Over 300 million copies sold as of 2023, making it the best-selling video game of all time.
+                </p>
+              </li>
+            </ul>
+            <div class="trailer">
+              <h2>Watch Trailer</h2>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/vdrn4ouZRvQ" title="Minecraft Caves &amp; Cliffs Update: Part II - Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide">
+        <img src="images/marvels-spider-man-2-2023-games-playstation-5-marvel-3840x2160-6510.jpg" alt="">
+        <div class="banner">
+          <div class="left">
+            <div class="features">
+              <div class="rating">
+                <span class="score">8.1</span>
+                <div class="content">
+                  <span class="subtitle">top review</span>
+                  <h4>Amazing</h4>
+                  <span>Rated 10/10, calling it a “masterpiece” and praising the seamless web-swinging and character development.</span>
+                </div>
+              </div>
+            </div>
+            <h1>Spider-man 2</h1>
+          </div>
+          <div class="right">
+            <ul class="description">
+              <li>
+                <h4><i class="fa-regular fa-circle-check"></i> Awards
+                </h4>
+                <p>Won Best PlayStation Game and Best Storytelling. 
+                </p>
+
+              </li>
+              <li>
+                <h4><i class="fa-regular fa-circle-check"></i> User Score
+                </h4>
+                <p>On Metacritic, the game holds an impressive user score of 9.3/10, reflecting widespread player satisfaction. 
+                </p>
+              </li>
+            </ul>
+            <div class="trailer">
+              <h2>Watch Trailer</h2>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/nq1M_Wc4FIc" title="Marvel&#39;s Spider-Man 2 - Be Greater. Together. Trailer I PS5 Games" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
           </div>
         </div>
       </div>
