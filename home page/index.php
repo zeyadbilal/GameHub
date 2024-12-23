@@ -23,7 +23,7 @@
 
 <body>
 <header>
-  <h2>Game <span>Hub</span></h2>
+  <h2>Game<span>Hub</span></h2>
   <h5 id="welcome" style="color: white; font-size: 20px; ">Welcome <?php echo $user_data['user_name']; ?></h5>
   <ul class="nav">
     <li><a href="../Search Page/index.php">Explore</a></li>
