@@ -83,9 +83,9 @@ If the credentials are correct, it sets the user_id in the session and redirects
                                 <label>Username</label>
                                 <i class="icon fa-solid fa-envelope"></i>
                             </div>
-
+                            <br>
                             <div class="inputWrap w-100">
-                                <input type ="password" name = "password" class="contactInput"></input>
+                                <input type ="password" name = "password" class="contactInput">
                                 <label>Password</label>
                                 <i class="icon fa-solid fa-lock"></i>
                             </div>
