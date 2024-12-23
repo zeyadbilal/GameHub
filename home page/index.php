@@ -24,10 +24,9 @@
 <body>
 <header>
   <h2>Game <span>Hub</span></h2>
-  <h5 id="welcome" style="color: white; font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome <?php echo $user_data['user_name']; ?></h5>
+  <h5 id="welcome" style="color: white; font-size: 20px; ">Welcome <?php echo $user_data['user_name']; ?></h5>
   <ul class="nav">
     <li><a href="../Search Page/index.php">Explore</a></li>
-    <li><a href="">Log in</a></li>
     <li><a href="../Authentication_System/logout.php">Logout</a></li>
   </ul>
   <div>
