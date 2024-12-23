@@ -84,7 +84,7 @@
 
 
       <div class="swiper-slide">
-        <img src="images/ghost-of-tsushima2-3840x2160-12072.jpg" alt="">
+        <img src="images/iYZoMIa5jb8Vwkt53JjH6J1anbe9r9ZyCYweqIscuXA.webp" alt="">
         <div class="banner">
           <div class="left">
             <div class="features">
@@ -117,7 +117,7 @@
             </ul>
             <div class="trailer">
               <h2>Watch Trailer</h2>
-              <iframe width="853" height="480" src="https://www.youtube.com/embed/Leb8_DXD7qM" title="GHOST OF TSUSHIMA Gameplay Walkthrough FULL GAME [4K 60FPS PC ULTRA] - No Commentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+              <iframe width="853" height="480" src="https://www.youtube.com/embed/Zbq7BnsQhrw" title="Ghost of Tsushima -The Ghost | PS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
           </div>
         </div>
       </div>
