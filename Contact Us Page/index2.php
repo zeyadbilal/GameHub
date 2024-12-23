@@ -19,8 +19,7 @@
     <header>
         <div class="container">
             <h2 class="lobo">Game<span>Hub</span></h2>
-            <a href="#" class="nav home">Home</a>
-            <a href="#" class="nav join">Join</a>
+
             <div class="nav themeToggle">
                 <i class="fa-solid fa-sun"></i>
                 <i class="fa-solid fa-moon"></i>
