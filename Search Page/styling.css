@@ -152,9 +152,10 @@ span {
 }
 
 img {
-  width: 204px;
+  width: 100%;
   height: 160px;
   display: block;
+  object-fit: cover;
 }
 
 .card:hover {
